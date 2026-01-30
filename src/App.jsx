@@ -1,10 +1,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
+
+import { useState } from 'react';
+
 import './App.css';
 import Simplify from './Simplify.jsx';
 
 const Home = () => {
   const navigate = useNavigate();
+  const [input, setInput] = useState('');
 
   return (
     <div className="App">
@@ -15,6 +19,11 @@ const Home = () => {
         style={{ padding: "20px", width: "100%", borderRadius: "20px", marginBottom: "20px" }}
         type="text"
         placeholder="How can I help you . . ."
+        value={input}
+        onChange={(e) =>{ 
+          setInput(e.target.value);
+          localStorage.setItem('userInput', e.target.value); 
+        }}
       />
       <button style={{ padding: "20px" }} onClick={() => navigate('/simplify')}>
         Analyze Case
