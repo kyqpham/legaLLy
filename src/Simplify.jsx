@@ -1,7 +1,12 @@
 import React from 'react';
 
 const Simplify = () => {
-  return <h1>Simplify Screen</h1>;
+  const userInput = localStorage.getItem('userInput');
+  return (
+    <div >
+      <h2> {userInput} </h2>
+    </div>
+  );
 };
 
 export default Simplify;
