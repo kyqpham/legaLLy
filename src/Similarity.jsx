@@ -6,7 +6,7 @@ const Similarity = () => {
   const location = useLocation();
 
   return (
-    <div style={{ padding: "20px" }}>
+    <div style={{ display: "flex", flexDirection: "column", padding: "20px" }}>
       <h1>Similarity Page</h1>
       <p> Using this summary for similar case search:</p>
     </div>

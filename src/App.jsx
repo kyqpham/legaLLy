@@ -6,9 +6,10 @@ import { useState } from 'react';
 
 import './App.css';
 import Simplify from './Simplify.jsx';
-import Similarity from "./Similarity.jsx";
 
 const Home = () => {
+
+  const styleBackground = { backgroundColor: '#f0f0f0' };
   const navigate = useNavigate();
   const [userText, setUserText] = useState('');
 
@@ -18,8 +19,11 @@ const Home = () => {
     e.target.style.height = e.target.scrollHeight + "px";
   }
 
+
+
+
   return (
-    <div className="App" style={{ backgroundColor: "#0A192F", height: "100vh", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", fontFamily: "Segoe UI', Roboto, sans-serif", color: "E0E0E0" }} >
+    <div className="App" style={{ height: "100vh", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", fontFamily: "Segoe UI', Roboto, sans-serif", color: "E0E0E0" }} >
       <h1 style={{ fontSize: "2.5rem", color: "#C5A059", fontWeight: "300", marginBottom: "2rem", letterSpacing: "2px", textTransform: "uppercase", alignItems: "center", padding: "20px" }}>
         Welcome to LegaLLy
       </h1>
@@ -55,29 +59,35 @@ const Home = () => {
             }}
             placeholder="How can I help you . . ."
 
-          />
-        </div>
 
-        <button style={{ padding: "20px" }} onClick={() => navigate('/simplify', { state: { userText } })}>
-          Analyze Case
-        </button>
+
+          />
+
+
+        </div>
       </div>
-      );
+
+      <button style={{ padding: "20px", fontWeight: "bold", color: "goldenrod" }} onClick={() => navigate('/simplify', { state: { userText } })} onMouseEnter={(e) => e.target.style.cursor = 'pointer'}>
+        Analyze Case
+      </button>
+    </div>
+  );
 };
 
-      function App() {
+function App() {
+  const styleBackground = { backgroundColor: '#f0f0f0' };
+
+
+
+
   return (
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/simplify" element={<Simplify />} />
-          <Route path="/similarity" element={<Similarity />} />
-        </Routes>
-      </Router>
-
-
-
-      );
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/simplify" element={<Simplify />} />
+      </Routes>
+    </Router>
+  );
 }
 
-      export default App;
+export default App;
