@@ -12,7 +12,19 @@ const Home = () => {
         Welcome to LegaLLy
       </h1>
       <input
-        style={{ padding: "20px", width: "100%", borderRadius: "20px", marginBottom: "20px" }}
+        style={{
+          padding: "20px",
+          width: "100%",
+          borderRadius: "20px",
+          marginBottom: "20px",
+          maxWidth: "600px",
+          minHeight: "100px",
+          overflowWrap: "break-word",
+          wordWrap: "break-word",
+          whiteSpace: "pre-wrap",
+          border: "1px solid #ccc",
+          fontSize: "16px",
+        }}
         type="text"
         placeholder="How can I help you . . ."
       />
