@@ -1,7 +1,13 @@
 import React from 'react';
+import { useLocation } from "react-router-dom";
+
+
 
 const Simplify = () => {
-  const userInput = localStorage.getItem('userInput');
+
+  const location = useLocation();
+  const userText = location.state?.userText || "";
+
 
   return (
     <div>
@@ -17,15 +23,16 @@ const Simplify = () => {
         <div
           style={{
             gap: '10px',
-            width: '45%', 
+            width: '45%',
             padding: '10px',
             borderRadius: '8px',
             border: '1px solid #ccc',
           }}
         >
-          <p>Item 1A</p>
-          <p>Item 1B</p>
-          <p>{userInput}</p>
+          <p>{userText}</p>
+
+
+
         </div>
 
         <div
@@ -33,18 +40,28 @@ const Simplify = () => {
             display: 'flex',
             flexDirection: 'row',
             gap: '2rem',
-            width: '45%', 
+            width: '45%',
             padding: '10px',
             borderRadius: '8px',
             marginRight: '20px',
             border: '1px solid #ccc'
           }}
         >
-          <p>Item 2A</p>
-          <p>Item 2B</p>
+
         </div>
 
       </section>
+
+
+      <button style={{ marginTop: '20px', padding: '10px 20px' }}>
+        More Information
+      </button>
+
+
+      <button style={{ marginTop: '20px', padding: '10px 20px' }}>
+        More Information2
+      </button>
+
     </div>
   );
 };
