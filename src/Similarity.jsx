@@ -1,9 +1,13 @@
 // src/Similarity.jsx
 import React from "react";
 import { useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
+
 
 const Similarity = () => {
   const location = useLocation();
+  const navigate = useNavigate();
 
   return (
     <div style={{ display: "flex", flexDirection: "column", padding: "20px" }}>
@@ -13,8 +17,9 @@ const Similarity = () => {
         <h1 style={{ margin: 0 }}>Similar Cases</h1>
         <p style={{ margin: 0 }}>Find outcomes for your case:</p>
       </div>
+    </div>
 
-      );
+  );
 };
 
-      export default Similarity;
+export default Similarity;
