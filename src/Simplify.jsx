@@ -1,9 +1,10 @@
 import React from 'react';
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 
 
 const Simplify = () => {
+  const navigate = useNavigate();
 
   const location = useLocation();
   const userText = location.state?.userText || "";
@@ -53,12 +54,12 @@ const Simplify = () => {
       </section>
 
 
-      <button style={{ marginTop: '20px', padding: '10px 20px' }}>
+      <button style={{ marginTop: '20px', padding: '10px 20px' }} onClick={() => navigate('/button1')} >
         More Information
       </button>
 
 
-      <button style={{ marginTop: '20px', padding: '10px 20px' }}>
+      <button style={{ marginTop: '20px', padding: '10px 20px' }} onClick={() => navigate('/button2')}>
         More Information2
       </button>
 
