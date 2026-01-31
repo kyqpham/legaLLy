@@ -23,14 +23,14 @@ const Home = () => {
 
 
   return (
-    <div className="App" style={{ backgroundColor: "#0A192F", width: "100vw", height: "100vh", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", fontFamily: "Segoe UI', Roboto, sans-serif", color: "E0E0E0" }} >
+    <div className="App" style={{ backgroundColor: "#0A192F", height: "100vh", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", fontFamily: "Segoe UI', Roboto, sans-serif", color: "E0E0E0" }} >
       <h1 style={{ fontSize: "2.5rem", color: "#C5A059", fontWeight: "300", marginBottom: "2rem", letterSpacing: "2px", textTransform: "uppercase", alignItems: "center", padding: "20px" }}>
         Welcome to LegaLLy
       </h1>
 
-      <div className="input-container" style={{ display: "flex", justifyContent: "center", }}>
+      <div className="input-container" style={{ display: "flex" }}>
 
-        <div style={{ width: "60%", maxWidth: "800px", position: "relative", }}>
+        <div style={{ width: "60%", maxWidth: "800px" }}>
 
           <textarea
             style={{
@@ -38,10 +38,9 @@ const Home = () => {
               maxWidth: "900px",
               marginBottom: "20px",
               minHeight: "5px",
-
+              backgroundColor: "rgba(132, 169, 140, 0.1)",
               padding: "12px 12px 12px 12px",
-
-              border: "1px solid #0b121c80",
+              border: "1px solid #84A98C",
               borderRadius: "10px",
               fontSize: "16px",
               lineHeight: "1.4",
