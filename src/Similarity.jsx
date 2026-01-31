@@ -1,0 +1,16 @@
+// src/Similarity.jsx
+import React from "react";
+import { useLocation } from "react-router-dom";
+
+const Similarity = () => {
+  const location = useLocation();
+
+  return (
+    <div style={{ padding: "20px" }}>
+      <h1>Similarity Page</h1>
+      <p> Using this summary for similar case search:</p>
+    </div>
+  );
+};
+
+export default Similarity;
