@@ -9,8 +9,12 @@ const Similarity = () => {
     <div style={{ display: "flex", flexDirection: "column", padding: "20px" }}>
       <h1>Similarity Page</h1>
       <p> Using this summary for similar case search:</p>
-    </div>
-  );
+      <div>
+        <h1 style={{ margin: 0 }}>Similar Cases</h1>
+        <p style={{ margin: 0 }}>Find outcomes for your case:</p>
+      </div>
+
+      );
 };
 
-export default Similarity;
+      export default Similarity;
