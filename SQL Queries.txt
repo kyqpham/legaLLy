@@ -1,0 +1,4 @@
+SELECT Charge, CaseType, FinalDisposition, Fine FROM charges WHERE (Charge LIKE 'SP %' OR Charge LIKE '%RECKLESS%') AND CaseType='Misdemeanor' LIMIT(100);
+
+
+SELECT Charge, CaseType, FinalDisposition, Fine FROM charges WHERE (Charge LIKE 'SP %' OR Charge LIKE '%RECKLESS%') AND CaseType='Infraction' LIMIT(100);
