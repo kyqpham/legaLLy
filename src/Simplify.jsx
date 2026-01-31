@@ -78,8 +78,8 @@ const Simplify = () => {
       </section>
 
 
-      <button style={{ marginTop: '20px', padding: '10px 20px' }} onClick={() => navigate('/button1')} >
-        More Information
+      <button style={{ marginTop: '20px', padding: '10px 20px' }} onClick={() => navigate('/similarity')} >
+        Search Similar Cases
       </button>
 
 
