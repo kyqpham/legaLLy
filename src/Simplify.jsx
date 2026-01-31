@@ -2,6 +2,8 @@ import React from 'react';
 import { useLocation, useNavigate } from "react-router-dom";
 
 
+import { useLocation } from "react-router-dom";
+import { useState } from 'react';
 
 const Simplify = () => {
   const navigate = useNavigate();
@@ -9,6 +11,27 @@ const Simplify = () => {
   const location = useLocation();
   const userText = location.state?.userText || "";
 
+  const [summary, setSummary] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const handleSummarize = async () => {
+    console.log("hi");
+    setLoading(true);
+
+    const res = await fetch("http://localhost:3001/summarize", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ text: userText }),
+    });
+
+    const data = await res.json();
+    setSummary(data.summary);
+    console.log("hello");
+    console.log(data.summary);
+    setLoading(false);
+  };
 
   return (
     <div>
@@ -32,8 +55,9 @@ const Simplify = () => {
         >
           <p>{userText}</p>
 
-
-
+          <button style={{ marginTop: '20px', padding: '10px 20px' }} onClick={handleSummarize}>
+            Summarize
+          </button>
         </div>
 
         <div
@@ -48,7 +72,7 @@ const Simplify = () => {
             border: '1px solid #ccc'
           }}
         >
-
+          <p> {summary}</p>
         </div>
 
       </section>
